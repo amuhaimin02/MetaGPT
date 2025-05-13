@@ -176,7 +176,13 @@ PROVIDERS = {
 
 
 def get_provider(model_id: str):
-    provider, model_name = model_id.split(".")[0:2]  # meta、mistral……
+    arr = model_id.split(".")
+    if len(arr) == 2:
+        provider, model_name = arr  # meta、mistral……
+    elif len(arr) == 3:
+        # some model_ids may contain country like us.xx.xxx
+        _, provider, model_name = arr
+
     if provider not in PROVIDERS:
         raise KeyError(f"{provider} is not supported!")
     if provider == "meta":
