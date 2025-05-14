@@ -48,6 +48,11 @@ SUPPORT_STREAM_MODELS = {
     "anthropic.claude-3-opus-20240229-v1:0": 4096,
     # Claude 3.5 Sonnet
     "anthropic.claude-3-5-sonnet-20240620-v1:0": 8192,
+    "anthropic.claude-3-5-sonnet-20241022-v2:0": 8192,
+    "us.anthropic.claude-3-5-sonnet-20241022-v2:0": 8192,
+    # Claude 3.7 Sonnet
+    "us.anthropic.claude-3-7-sonnet-20250219-v1:0": 131072,
+    "anthropic.claude-3-7-sonnet-20250219-v1:0": 131072,
     # Command Text
     # https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-cohere-command.html
     "cohere.command-text-v14": 4096,
@@ -93,6 +98,7 @@ SUPPORT_STREAM_MODELS = {
     # Mistral Large 2 (24.07)
     "mistral.mistral-large-2407-v1:0": 8192,
 }
+
 
 # TODO:use a more general function for constructing chat templates.
 
